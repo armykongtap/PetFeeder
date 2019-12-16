@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Table } from "react-bootstrap";
+import {Table } from "react-bootstrap";
 
 class Schdule extends Component {
   render() {
