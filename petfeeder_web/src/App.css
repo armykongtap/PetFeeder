@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color:white;
 }
 
 .App-link {
@@ -46,4 +46,15 @@
   margin-bottom: 10px;
   margin-right: 10px;
   margin-left: 10px;
+}
+.Center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
 }

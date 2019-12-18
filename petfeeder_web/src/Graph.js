@@ -14,57 +14,43 @@ import {
 
 const data = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400
+    name: "06.00",
+    amount: 240
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210
+    name: "08.00",
+    amount: 221
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290
+    name: "10.00",
+    amount: 229
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000
+    name: "12.00",
+    amount: 200
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181
+    name: "14.00",
+    amount: 218
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500
+    name: "16.00",
+    amount: 250
   },
   {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100
+    name: "18.00",
+    amount: 210
   }
 ];
 
 const data2 = [
-  { name: "Page A", uv: 4000 },
-  { name: "Page B", uv: 3000 },
-  { name: "Page C", uv: 2000 },
-  { name: "Page D" },
-  { name: "Page E", uv: 1890 },
-  { name: "Page F", uv: 2390 },
-  { name: "Page G", uv: 3490 }
+  { name: "Mon", amount: 400 },
+  { name: "Tue", amount: 300 },
+  { name: "Wed", amount: 200 },
+  { name: "Thu", amount: 190},
+  { name: "Fri", amount: 189 },
+  { name: "Sat", amount: 239 },
+  { name: "Sun", amount: 340 }
 ];
 
 class EatTime extends Component {
@@ -86,8 +72,7 @@ class EatTime extends Component {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="pv" fill="#8884d8" />
-        <Bar dataKey="uv" fill="#82ca9d" />
+        <Bar dataKey="amount" fill="#8884d8" />
       </BarChart>
     );
   }
@@ -98,13 +83,13 @@ class EatDay extends Component {
     return (
       <LineChart
         width={500}
-        height={200}
+        height={300}
         data={data2}
         margin={{
           top: 10,
           right: 30,
           left: 0,
-          bottom: 0
+          bottom: 28
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
@@ -114,9 +99,10 @@ class EatDay extends Component {
         <Line
           connectNulls
           type="monotone"
-          dataKey="uv"
+          dataKey="amount"
           stroke="#8884d8"
           fill="#8884d8"
+          
         />
       </LineChart>
     );

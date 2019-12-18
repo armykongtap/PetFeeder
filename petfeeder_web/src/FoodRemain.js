@@ -23,21 +23,20 @@ class FoodRemainBowl extends Component {
   }
 }
 
-class FoodRemainSilo extends Component {
+class Feed extends Component {
   render() {
     return (
       <Container className="Box" id="2">
         <Row>
           <Col>
-            <Image
-              width="50"
-              src="https://image.flaticon.com/icons/png/512/123/123941.png"
-              rounded
-            />
+          <Image
+              width="60"
+              src="https://image.flaticon.com/icons/png/512/1279/1279250.png"
+              onClick="Feed()"
+              />
           </Col>
           <Col>
-            <div>Food remain in silo</div>
-            <h3>999 %</h3>
+            <div>Feed Me</div>
           </Col>
         </Row>
       </Container>
@@ -54,7 +53,7 @@ class FoodRemain extends Component {
             <FoodRemainBowl />
           </Col>
           <Col >
-            <FoodRemainSilo />
+            <Feed />
           </Col>
         </Row>
       </Container>
