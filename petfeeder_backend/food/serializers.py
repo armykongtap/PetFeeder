@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from food.models import Food
+from food.models import Weight
 
 
-class FoodSerializer(serializers.HyperlinkedModelSerializer):
+class WeightSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Food
-        fields = ['id', 'time', 'change']
+        model = Weight
+        fields = ['id', 'time', 'weight']
