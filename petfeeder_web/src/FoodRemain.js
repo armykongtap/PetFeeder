@@ -32,7 +32,6 @@ class Feed extends Component {
           <Image
               width="60"
               src="https://image.flaticon.com/icons/png/512/1279/1279250.png"
-              onClick="Feed()"
               />
           </Col>
           <Col>
@@ -53,7 +52,7 @@ class FoodRemain extends Component {
             <FoodRemainBowl />
           </Col>
           <Col >
-            <Feed />
+            <Feed onClick="Feed()"/>
           </Col>
         </Row>
       </Container>
