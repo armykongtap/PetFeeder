@@ -29,9 +29,10 @@ def weight_list(request):
 def weight_last(request):
 
     if request.method == 'GET':
-        data = Schedule.objects.all()
-        serializer = ScheduleSerializer(data, many=True)
-        return JsonResponse(serializer.data[-1], status=200, safe=False)
+        data = Weight.objects.all()
+        serializer = WeightSerializer(data, many=True)
+        if serializer.data[-1]:
+            return JsonResponse(serializer.data[-1], status=200, safe=False)
 
 
 @csrf_exempt
@@ -55,8 +56,11 @@ def feed_list(request):
 def feed_how(request):
     if request.method == 'GET':
         data = Schedule.objects.all()
-        serializer = ScheduleSerializer(data, many=True)
-        if not serializer.data[-1]['hasFeeded']:
+        if data:
+            serializer = ScheduleSerializer(data, many=True)
+            id = serializer.data[-1]['id']
+            data2 = Schedule.objects.get(pk=id)
+            data2.delete()
             return HttpResponse(100)
         else:
             return HttpResponse(0)

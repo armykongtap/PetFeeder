@@ -1,6 +1,28 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Image, Button} from "react-bootstrap";
 class FoodRemainBowl extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      weight: 0
+    };
+  }
+
+  async componentDidMount() {
+    try {
+      setInterval(async () => {
+        const res = await fetch("http://localhost:8000/lastweight/");
+        const blocks = await res.json();
+        const tmp = blocks["weight"];
+
+        this.setState({
+          weight: tmp
+        });
+      }, 100);
+    } catch (e) {
+      console.log(e);
+    }
+  }
   render() {
     return (
       <Container className="Box" id="1">
@@ -14,7 +36,7 @@ class FoodRemainBowl extends Component {
           </Col>
           <Col>
             <div class="cursive" >Food remain in bowl</div>
-            <h3 class="cursive">999 g</h3>
+            <h3 class="cursive">{this.state.weight}</h3>
           </Col>
         </Row>
       </Container>
