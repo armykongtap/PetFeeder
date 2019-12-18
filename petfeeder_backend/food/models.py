@@ -6,3 +6,11 @@ class Weight(models.Model):
 
     def __str__(self):
         return self.time+" "+self.weight
+
+class Schedule(models.Model):
+    time = models.DateTimeField()
+    amount = models.IntegerField()
+    hasFeeded = models.BooleanField()
+
+    def __str__(self):
+        return self.time+" "+self.amount
