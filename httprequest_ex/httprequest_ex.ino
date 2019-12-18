@@ -57,13 +57,14 @@ delay(1000);
 Serial.print("Connecting..");
  
 }
- 
+
 }
- 
+int i = 100;
 void loop() {
   int tmp=howfeed();
   Serial.println(tmp);
-  sendWeight(99);
-delay(10000);    //Send a request every 30 seconds
+  sendWeight(i);
+  i = i+1;
+delay(1000);    //Send a request every 30 seconds
  
 }
