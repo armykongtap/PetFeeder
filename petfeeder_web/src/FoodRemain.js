@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
-
+import { Container, Row, Col, Image, Button} from "react-bootstrap";
 class FoodRemainBowl extends Component {
   render() {
     return (
@@ -24,6 +23,9 @@ class FoodRemainBowl extends Component {
 }
 
 class Feed extends Component {
+  feed(){
+    console.log("1234");
+  }
   render() {
     return (
       <Container className="Box" id="2">
@@ -35,7 +37,7 @@ class Feed extends Component {
               />
           </Col>
           <Col>
-            <div class="cursive">Feed Me</div>
+            <Button onClick={this.feed} id = "feed" >Feed me</Button>
           </Col>
         </Row>
       </Container>
@@ -52,12 +54,17 @@ class FoodRemain extends Component {
             <FoodRemainBowl />
           </Col>
           <Col >
-            <Feed onClick="Feed()"/>
+            <Feed/>
           </Col>
         </Row>
       </Container>
     );
   }
 }
+
+/*function updateDate(){
+  //document.getElementById("feed").innerHTML = Date();
+  document.getElementById("feed").addEventListener("Feed me", Feed); 
+}*/
 
 export default FoodRemain;
