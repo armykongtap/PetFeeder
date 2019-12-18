@@ -53,8 +53,6 @@
   justify-content: center;
 }
 
-.bottomleft {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
+.cursive{
+  font-family: cursive;
 }

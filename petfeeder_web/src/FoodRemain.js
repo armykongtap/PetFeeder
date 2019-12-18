@@ -14,8 +14,8 @@ class FoodRemainBowl extends Component {
             />
           </Col>
           <Col>
-            <div>Food remain in bowl</div>
-            <h3>999 g</h3>
+            <div class="cursive" >Food remain in bowl</div>
+            <h3 class="cursive">999 g</h3>
           </Col>
         </Row>
       </Container>
@@ -36,7 +36,7 @@ class Feed extends Component {
               />
           </Col>
           <Col>
-            <div>Feed Me</div>
+            <div class="cursive">Feed Me</div>
           </Col>
         </Row>
       </Container>

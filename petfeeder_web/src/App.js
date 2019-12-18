@@ -3,7 +3,7 @@ import FoodRemain from "./FoodRemain";
 import Graph from "./Graph";
 import NavBar from "./NavBar";
 import "./App.css";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 function App() {
   return (
