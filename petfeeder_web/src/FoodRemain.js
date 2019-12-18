@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Image, Button} from "react-bootstrap";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
 class FoodRemainBowl extends Component {
   constructor(props) {
     super(props);
@@ -35,7 +35,7 @@ class FoodRemainBowl extends Component {
             />
           </Col>
           <Col>
-            <div class="cursive" >Food remain in bowl</div>
+            <div class="cursive">Food remain in bowl</div>
             <h3 class="cursive">{this.state.weight}</h3>
           </Col>
         </Row>
@@ -45,21 +45,42 @@ class FoodRemainBowl extends Component {
 }
 
 class Feed extends Component {
-  feed(){
-    console.log("1234");
+  constructor(props) {
+    super(props);
+
+    this.feed = this.feed.bind(this);
+  }
+
+  async feed(event) {
+    let response;
+    event.preventDefault();
+    try {
+      response = await fetch("http://localhost:8000/feed/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          amount: 100
+        })
+      });
+      console.log(response.status);
+    } catch (err) {
+      console.error(err);
+    }
   }
   render() {
     return (
       <Container className="Box" id="2">
         <Row>
           <Col>
-          <Image
+            <Image
               width="60"
               src="https://image.flaticon.com/icons/png/512/1279/1279250.png"
-              />
+            />
           </Col>
           <Col>
-            <Button onClick={this.feed} id = "feed" >Feed me</Button>
+            <Button onClick={this.feed} id="feed">
+              Feed me
+            </Button>
           </Col>
         </Row>
       </Container>
@@ -72,11 +93,11 @@ class FoodRemain extends Component {
     return (
       <Container>
         <Row>
-          <Col >
+          <Col>
             <FoodRemainBowl />
           </Col>
-          <Col >
-            <Feed/>
+          <Col>
+            <Feed />
           </Col>
         </Row>
       </Container>

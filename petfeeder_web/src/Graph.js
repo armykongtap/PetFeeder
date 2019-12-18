@@ -15,7 +15,7 @@ import {
 const data = [
   {
     name: "06.00",
-    amount: 240
+    amount: 0
   },
   {
     name: "08.00",
@@ -23,7 +23,7 @@ const data = [
   },
   {
     name: "10.00",
-    amount: 229
+    amount: 20
   },
   {
     name: "12.00",
@@ -31,26 +31,34 @@ const data = [
   },
   {
     name: "14.00",
-    amount: 218
+    amount: 0
   },
   {
     name: "16.00",
-    amount: 250
+    amount: 0
   },
   {
     name: "18.00",
-    amount: 210
+    amount: 250
+  },
+  {
+    name: "20.00",
+    amount: 0
+  },
+  {
+    name: "22.00",
+    amount: 100
   }
 ];
 
 const data2 = [
-  { name: "Mon", amount: 400 },
-  { name: "Tue", amount: 300 },
-  { name: "Wed", amount: 200 },
-  { name: "Thu", amount: 190},
-  { name: "Fri", amount: 189 },
-  { name: "Sat", amount: 239 },
-  { name: "Sun", amount: 340 }
+  { name: "Mon", amount: 600 },
+  { name: "Tue", amount: 700 },
+  { name: "Wed", amount: 810 },
+  { name: "Thu", amount: 790 },
+  { name: "Fri", amount: 689 },
+  { name: "Sat", amount: 739 },
+  { name: "Sun", amount: 640 }
 ];
 
 class EatTime extends Component {
@@ -102,7 +110,6 @@ class EatDay extends Component {
           dataKey="amount"
           stroke="#8884d8"
           fill="#8884d8"
-          
         />
       </LineChart>
     );
