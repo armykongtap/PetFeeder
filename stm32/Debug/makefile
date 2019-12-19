@@ -39,8 +39,8 @@ utralsonic.list \
 all: utralsonic.elf secondary-outputs
 
 # Tool invocations
-utralsonic.elf: $(OBJS) $(USER_OBJS) D:\Pet\embeddedLab\utralsonic\STM32F407VGTX_FLASH.ld
-	arm-none-eabi-gcc -o "utralsonic.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Pet\embeddedLab\utralsonic\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="utralsonic.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+utralsonic.elf: $(OBJS) $(USER_OBJS) C:\Users\ARMY\Documents\GitHub\PetFeeder\stm32\STM32F407VGTX_FLASH.ld
+	arm-none-eabi-gcc -o "utralsonic.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ARMY\Documents\GitHub\PetFeeder\stm32\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="utralsonic.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

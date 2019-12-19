@@ -8,4 +8,7 @@ servo
 ORANGE - PD12 # PWM TIM4_CH1 RED - 3V BROWN - GND
 
 nodeMCU
-TX - PA3 RX RX - PA2 TX
+D8 - PA3 D7 D7 - PA2 D8
+
+weight
+PD1-DT PD2-sck GND-Gnd VCC-3v

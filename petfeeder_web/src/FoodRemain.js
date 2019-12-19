@@ -18,7 +18,7 @@ class FoodRemainBowl extends Component {
         this.setState({
           weight: tmp
         });
-      }, 100);
+      }, 1000);
     } catch (e) {
       console.log(e);
     }

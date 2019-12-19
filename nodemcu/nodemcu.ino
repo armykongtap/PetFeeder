@@ -2,7 +2,6 @@
 #include <string.h>
 #include <SoftwareSerial.h>
 #include <ESP8266WiFi.h>
-#include <MicroGear.h>
 #include <ESP8266HTTPClient.h>
 #define WIFI_SSID "aARMY"
 #define WIFI_PASSWORD "Army1234"
@@ -126,5 +125,5 @@ void loop() {
       Serial.println("Send complete");
      //stm32Serial.write(msg);
   }
-  delay(500);
+  delay(1000);
 }
